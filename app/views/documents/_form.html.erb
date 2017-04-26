@@ -1,0 +1,25 @@
+<%= bootstrap_form_for(document) do |f| %>
+  <% if document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+      <% document.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :title, label: "Başlık" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :data, label: "Şifrelemek istediğiniz veri" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Şifrele" %>
+  </div>
+<% end %>

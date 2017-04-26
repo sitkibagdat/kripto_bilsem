@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170422235506) do
+ActiveRecord::Schema.define(version: 20170426203416) do
+
+  create_table "documents", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title",                          null: false
+    t.text     "data",           default: "",    null: false
+    t.string   "url",                            null: false
+    t.text     "encrypted_data", default: "",    null: false
+    t.boolean  "published",      default: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["user_id"], name: "index_documents_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
