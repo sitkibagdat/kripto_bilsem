@@ -222,5 +222,9 @@ en:
         email: E-posta adresi
         password: Parola
         password_confirmation: Parola (tekrar)
+      document:
+        title: Başlık
+        data: Şİfrelemek istediğiniz veri
+
 
 
