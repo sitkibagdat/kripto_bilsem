@@ -9,14 +9,12 @@ class DocumentsController < ApplicationController
   end
 
   def publish
-    @document.published = true
-    @document.save
+    @document.toggle!(:published)
     redirect_to dashboard_index_url, notice: 'Veri yayınlanmaya başladı.'
   end
 
   def unpublish
-    @document.published = false
-    @document.save
+    @document.toggle!(:published)
     redirect_to dashboard_index_url, notice: 'Veri yayından kaldırıldı.'
   end
 
