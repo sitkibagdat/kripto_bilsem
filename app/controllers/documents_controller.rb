@@ -55,10 +55,12 @@ class DocumentsController < ApplicationController
 
     def document_params
       params.require(:document).permit(:title, :data).
-        merge({url: create_publish_url})
+        merge({
+          url: create_custom_key,
+          encryption_broker_key: create_custom_key})
     end
 
-    def create_publish_url
+    def create_custom_key
       SecureRandom.urlsafe_base64
     end
 end

@@ -2,20 +2,17 @@
 #
 # Table name: documents
 #
-#  id             :integer          not null, primary key
-#  user_id        :integer
-#  title          :string           not null
-#  url            :string           not null
-#  encrypted_data :text             default(""), not null
-#  published      :boolean          default("false")
-#  alg1           :string
-#  alg2           :string
-#  alg3           :string
-#  key1           :string
-#  key2           :string
-#  key3           :string
-#  created_at     :datetime         not null
-#  updated_at     :datetime         not null
+#  id                    :integer          not null, primary key
+#  user_id               :integer
+#  title                 :string           not null
+#  url                   :string           not null
+#  encrypted_data        :text
+#  encrypted_data_iv     :text
+#  published             :boolean          default("false")
+#  algorithms            :string
+#  encryption_broker_key :string
+#  created_at            :datetime         not null
+#  updated_at            :datetime         not null
 #
 # Indexes
 #

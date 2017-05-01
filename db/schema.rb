@@ -17,18 +17,15 @@ ActiveRecord::Schema.define(version: 20170426203416) do
 
   create_table "documents", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "title",                          null: false
-    t.string   "url",                            null: false
-    t.text     "encrypted_data", default: "",    null: false
-    t.boolean  "published",      default: false
-    t.string   "alg1"
-    t.string   "alg2"
-    t.string   "alg3"
-    t.string   "key1"
-    t.string   "key2"
-    t.string   "key3"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.string   "title",                                 null: false
+    t.string   "url",                                   null: false
+    t.text     "encrypted_data"
+    t.text     "encrypted_data_iv"
+    t.boolean  "published",             default: false
+    t.string   "algorithms"
+    t.string   "encryption_broker_key"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.index ["user_id"], name: "index_documents_on_user_id", using: :btree
   end
 

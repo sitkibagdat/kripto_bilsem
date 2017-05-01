@@ -16,7 +16,7 @@
       <td><%= doc[:title] %></td>
       <td><%= link_to "Tıkla", "http://localhost:3000/secrets/#{doc[:url]}" %></td>
       <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td><%= doc[:encryption_broker_key] %></td>
       <td>
         <% if doc.published? %>
           <%= link_to "Yayından Kaldır", document_unpublish_path(doc), method: :post %>
