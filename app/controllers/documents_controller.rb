@@ -57,7 +57,8 @@ class DocumentsController < ApplicationController
       params.require(:document).permit(:title, :data).
         merge({
           url: create_custom_key,
-          encryption_broker_key: create_custom_key})
+          encryption_broker_key: create_custom_key,
+          algorithms: OpenSSL::Cipher.ciphers.sample(3)})
     end
 
     def create_custom_key

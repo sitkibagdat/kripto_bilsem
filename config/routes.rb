@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   post 'documents/:id/publish', to: 'documents#publish', as: :document_publish
   post 'documents/:id/unpublish', to: 'documents#unpublish', as: :document_unpublish
 
-  get 'secrets/:url_id', to: 'secrets#examine'
+  get 'secrets/:url_id', to: 'secrets#examine', as: :secrets_examine
   post 'secrets/:url_id/reveal', to: 'secrets#reveal'
 end

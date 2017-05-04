@@ -6,7 +6,7 @@ class SecretsController < ApplicationController
 
   def reveal
     if params[:secret_key] != @document.encryption_broker_key
-      redirect_to root_path, notice: "Girmiş olduğunuz anahtar değeri geçersizdir."
+      redirect_to secrets_examine_url, notice: "Girmiş olduğunuz anahtar değeri geçersizdir."
     end
   end
 

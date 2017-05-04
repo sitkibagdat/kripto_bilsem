@@ -1,3 +1,40 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<%= link_to "Dashboard", dashboard_index_path %>
+<div class="row">
+  <div class="col-xs-3">
+    <%= image_tag('4006_logo.png', size: '192x192') %>
+  </div>
+  <div class="col-xs-9">
+    <h1 class="text-center " style="margin-top: 30px; line-height: 64px;">
+      Birleşik ve Kişisel Şifreleme Kullanarak Hassas Verilerin İnternet Üzerinden Paylaşımı
+    </h1>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 30px; ">
+  <div class="col-xs-6">
+    <div class="panel panel-default" style="line-height: 24px;">
+      <div class="panel-heading">Projenin Amacı</div>
+      <div class="panel-body">Hassas bilgiler içeren verilerin, internet üzerinden paylaşımı sırasında erişime yetkisiz kişiler tarafından görüntülenmesinin önlenmesi.
+      </div>
+    </div>
+    
+    <div class="list-group">
+      <a href="#" class="list-group-item active">
+        Ekibimiz
+      </a>
+      <a href="#" class="list-group-item">Ahmet Ulaş GÜNDOĞDU</a>
+      <a href="#" class="list-group-item">Eyüp Zafer ÜNAL</a>
+      <a href="#" class="list-group-item">Sıtkı BAĞDAT (Danışman Öğretmen)</a>
+    </div>
+
+    
+  </div>
+  <div class="col-xs-6">
+    <div class="panel panel-info" style="line-height: 24px;"> 
+      <div class="panel-heading">Proje Özeti</div>
+      <div class="panel-body">Proje web tabanlı bir uygulamaya entegre şekilde, kullanıcıya ait bilgilerin (e-posta adresi, üye olma tarih-saati vb.) bazılarını da şifreleme algoritmasına ekleyerek kişiye özel şifrelemenin oluşturulmasını sağlayacaktır. Şifreleme işlemi, kişiye özel bilgilerin yanı sıra her defasında pek çok algoritma içerisinden rasgele seçilen bir ya da birkaç algoritmanın kullanılması sayesinde gerçekleştirilecek olacağından şifrenin kırılma ihtimalini oldukça düşürecektir.<br><br>
+
+      Bu aşamada oluşturulan şifrelenmiş doküman bir URL adresi aracılığıyla diğer kişilerle paylaşılabilecektir. Ayrıca şifrenin çözümü için bir anahtar oluşturacak ve bu anahtar kullanılarak orijinal içerik görüntülenebilecektir. Anahtarlar sistem üzerinden dağıtılabileceği gibi, farklı depolama birimleri aracılığıyla da paylaşılabilecektir. Bu sayede şifrenin çözülmesine ilişkin gerekliliklerin daha sıkı bir şekilde korunması sağlanacaktır.
+      </div>
+    </div>
+  </div>
+</div>
